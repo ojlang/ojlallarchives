@@ -1,0 +1,6 @@
+! Criação de uma função
+f funcaooi (say $oi;);
+! Criação da variavel
+var oi = "Hello";
+! Chamando função
+f funcaooi;

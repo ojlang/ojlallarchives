@@ -1,0 +1,11 @@
+! Teste simplificado para calc e if
+
+var a1 = 0;
+var a2 = 5;
+var a3 = 5;
+
+! Calculando o valor de a1
+calc a2 + a3 -> a1;
+
+! Verificando o valor de a1 com if
+if $a1 = 10 (say "Hello World";);

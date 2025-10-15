@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Assets/logo.png" type="image/x-icon" />
+    <title>oJl Documentation (Open John Language)</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            display: flex;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+        .sidebar {
+            width: 280px;
+            position: fixed;
+            height: 100%;
+            overflow-y: auto;
+            background-color: #fff;
+            border-right: 1px solid #e0e0e0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .sidebar h2 {
+            margin-top: 0;
+            font-size: 1.2em;
+            color: #000;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #555;
+            display: block;
+            padding: 8px 0;
+            font-size: 0.95em;
+            transition: all 0.2s ease;
+        }
+        .sidebar ul li a:hover {
+            color: #007bff;
+        }
+        .sidebar ul ul {
+            padding-left: 20px;
+        }
+        .main-content {
+            margin-left: 300px;
+            padding: 40px;
+            max-width: 800px;
+        }
+        h1, h2, h3 {
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        h1 { font-size: 2.5em; }
+        h2 { font-size: 2em; }
+        h3 { font-size: 1.5em; }
+        pre {
+            background-color: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+        }
+        code {
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+        }
+        blockquote {
+            border-left: 4px solid #007bff;
+            padding-left: 15px;
+            color: #666;
+            margin-left: 0;
+        }
+        a {
+            color: #007bff;
+        }
+        .logo {
+            display: block;
+            margin-bottom: 20px;
+            max-width: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="sidebar">
+        <img src="oJl.png" alt="oJl Logo" class="logo">
+        <h2>Navigation</h2>
+        <ul>
+            <li><a href="#intro">Introduction</a>
+                <ul>
+                    <li><a href="#what-is">What is oJl?</a></li>
+                    <li><a href="#why">Why did I create oJl?</a></li>
+                    <li><a href="#goals">Language Goals</a></li>
+                </ul>
+            </li>
+            <li><a href="#first-steps">First Steps</a>
+                <ul>
+                    <li><a href="#install">How to Install?</a></li>
+                    <li><a href="#requirements">System Requirements</a></li>
+                    <li><a href="#first-program">Your First Program</a></li>
+                </ul>
+            </li>
+            <li><a href="#manual">The Manual</a>
+                <ul>
+                    <li><a href="#syntax">Syntax</a></li>
+                    <li><a href="#bible">The oJl Bible</a></li>
+                    <li><a href="#comments">Comments</a></li>
+                    <li><a href="#variables">Variables</a></li>
+                    <li><a href="#say">The `say` Command</a></li>
+                    <li><a href="#calc">The `calc` Command</a></li>
+                    <li><a href="#if">The `if` Command</a></li>
+                    <li><a href="#functions">Functions</a></li>
+                </ul>
+            </li>
+            <li><a href="#help">Need help?</a></li>
+            <li><a href="#final-considerations">Final Considerations</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <h1>The Open John Language (oJl)</h1>
+        <p><strong>Version:</strong> betaV0.1 | <strong>Documentation:</strong> oJl Bible V0.1 EN-US</p>
+        <p><em>Written By: João Victor (John)</em></p>
+
+        <section id="intro">
+            <h2 style="margin-top: 0;">I.0 - Introduction</h2>
+            <p>Hello dear reader,<br>I thank you in advance for reading this documentation! If you are here, it means you have decided to test JL, or simply get to know my project. This is a great reason for me to be happy. Thank you!</p>
+            
+            <h3 id="what-is">I.1 - What is oJl?</h3>
+            <p>oJl (Open John Language) is a programming language developed with the purpose of being clear, simple, and accessible. Its syntax was designed to be close to a natural language, facilitating the reading and comprehension of the code, which makes it suitable for both beginners and experienced developers looking for productivity.</p>
+            <blockquote>As its name suggests, oJl is an open-source project; feel free to modify and study in depth how the project works.</blockquote>
+            <p>The main goal of oJl is to be intuitive and functional, without sacrificing efficiency. It is an experimental project in constant evolution, with the aim of offering a viable and friendly alternative in the programming language ecosystem.</p>
+
+            <h3 id="why">I.2 - Why did I create oJl?</h3>
+            <p>Programming languages are fundamental tools that allow us to communicate with machines since the 20th century. oJl was born from this purpose: to be welcoming, simple, and functional, allowing complex projects to be developed clearly and accessibly.</p>
+            <p>I cannot fail to acknowledge that the creation of oJl also arose from a personal motivation: the desire to build something that had its own identity and could be recognized. Even if it comes to be remembered as a “different” or even “strange” language, for me, the most important thing is that it carries personality and meaning.</p>
+
+            <h3 id="goals">I.3 - Language Goals</h3>
+            <p>oJl was designed to have a general focus, capable of being used in different types of projects, from the simplest to more complex applications. Its proposal to be an open and flexible language allows anyone to adapt, expand, and create new versions according to their own needs and objectives.</p>
+        </section>
+
+        <section id="first-steps">
+            <h2>P.0 - First Steps</h2>
+
+            <h3 id="install">P.1 - How to Install?</h3>
+            <p>Installing JL is quick and simple. As JL was developed in Python, you need to have Python installed on your machine.</p>
+            <ol>
+                <li><strong>Download the interpreter:</strong> Download the <code>ojlreader.py</code> file.</li>
+                <li><strong>Create your JL file:</strong> Create a file with the <code>.ojl</code> extension (e.g., <code>my_code.ojl</code>).</li>
+                <li><strong>Execute your program:</strong> To run the file, just open the interpreter with Python, passing the file as an argument:</li>
+            </ol>
+            <pre><code>python3 ojlreader.py my_code.ojl</code></pre>
+            <blockquote>I also cannot ignore the fact that running programs written in oJl is a tedious process; I will start working on an IDE to make it easier to work with.</blockquote>
+
+            <h3 id="requirements">P.2 - System Requirements</h3>
+            <ul>
+                <li>Any operating system capable of running Python 3.8 or higher.</li>
+                <li>Text editor for creating <code>.ojl</code> files.</li>
+                <li>Terminal or command prompt for running the programs.</li>
+            </ul>
+
+            <h3 id="first-program">P.3 - Your First Program</h3>
+            <p>The classic “Hello, World!” in oJl.</p>
+            <p>1. Create the file <code>hello.ojl</code>.</p>
+            <p>2. Write the code:</p>
+            <pre><code>say "Hello, World!";</code></pre>
+            <p>3. Execute in the terminal:</p>
+            <pre><code>python3 lexer.py hello.ojl</code></pre>
+            <p>The <code>say</code> command is responsible for displaying messages, similar to <code>print</code> in other programming languages.</p>
+        </section>
+
+        <section id="manual">
+            <h2>M.0 - The Manual</h2>
+            
+            <h3 id="syntax">M.1 - Syntax</h3>
+            <p>The syntax of oJl aims to be simple and understandable, resembling a conversation. The syntax of oJl has evolved over time to be more "clean" and less daunting.</p>
+            <blockquote>Out of curiosity, I will show the evolution of the language's syntax. The project initially started with a somewhat strange syntax. Here is a simple old "Hello World":<br>
+            <code>when_tcs{ say = “Hello World” }</code>
+            </blockquote>
+
+            <h3 id="bible">M.2 - The oJl Bible</h3>
+            
+            <h4 id="comments">M.2.1. Comments</h4>
+            <p>Any text after an <code>!</code> is a comment.</p>
+            <pre><code>! This is a comment.
+var name = "John"; ! This is also one.</code></pre>
+
+            <h4 id="variables">M.2.2. Variables</h4>
+            <p>Use <code>var</code> to declare and <code>$</code> to use.</p>
+            <pre><code>! Declaration
+var message = "Hello, world!";
+var age = 25;
+
+! Usage
+say $message;</code></pre>
+
+            <h4 id="say">M.2.3. The `say` Command (Output)</h4>
+            <p>Used to print values to the screen.</p>
+            <pre><code>say "This is a literal text.";
+say $age;</code></pre>
+
+            <h4 id="calc">M.2.4. The `calc` Command (Calculations)</h4>
+            <p>Performs a mathematical operation and stores the result. The syntax is <code>calc [expression] -> [destination_variable];</code>.</p>
+            <pre><code>var x = 10;
+var y = 5;
+var result = 0;
+
+calc x + y -> result; ! result now holds 15
+say $result;</code></pre>
+
+            <h4 id="if">M.2.5. Control Structures (The `if` Command)</h4>
+            <p>Executes a block of code if a condition is true. <strong>All on a single line.</strong></p>
+            <pre><code>var score = 10;
+if $score = 10 (say "Congratulations, maximum score!";);</code></pre>
+
+            <h4 id="functions">M.2.6. Functions</h4>
+            <p>Groups code for reuse. <strong>All on a single line.</strong></p>
+            <pre><code>! Definition
+f greeting (say "Hello!";say "Welcome to OJL!";);
+
+! Call
+f greeting;</code></pre>
+        </section>
+
+        <section id="help">
+            <h2>M.3 - Need help?</h2>
+            <p>Found an error? Want to suggest something? Fill out the form: <a href="https://docs.google.com/forms/d/e/1FAIpQLSeLlWwxam5vtrnn6Onjt6RYGyQ-1BeLNBIVEg8ArTUKQCI94g/viewform" target="_blank">Tell us here</a>.</p>
+        </section>
+
+        <section id="final-considerations">
+            <h2>F.0 - Final Considerations</h2>
+            <p>We have reached the end of this documentation. I am happy to know that you have made it this far. I hope that this documentation, simple as it is, can be useful to you. Follow us on GitHub for more information.</p>
+            <p>Thank you! ;D</p>
+            <hr>
+            <p>
+                oJl is an open-source project created by João Victor.<br>
+                <a href="https://github.com/ojlang" target="_blank">Project GitHub Page</a> | 
+                <a href="https://github.com/PernilongoKiller" target="_blank">My GitHub Profile</a>
+            </p>
+            <p><small>Note: This documentation was translated using Artificial Intelligence.</small></p>
+        </section>
+
+    </main>
+
+</body>
+</html>

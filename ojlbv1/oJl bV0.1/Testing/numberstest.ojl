@@ -1,0 +1,31 @@
+! Testando números e matemática na OJL
+
+! Declarando números
+var x = 10;
+var y = 20.5;
+
+say "Os valores de x e y sao:";
+say $x;
+say $y;
+
+! Fazendo operacoes
+var soma = $x + $y; ! 10 + 20.5 = 30.5
+var sub = $y - 5;   ! 20.5 - 5 = 15.5
+var mult = 5 * 2;   ! 10
+var div = 100 / 4;  ! 25.0
+
+say "O resultado da soma e:";
+say $soma;
+
+say "O resultado da subtracao e:";
+say $sub;
+
+say "O resultado da multiplicacao e:";
+say $mult;
+
+say "O resultado da divisao e:";
+say $div;
+
+! Teste de erro (divisao por zero)
+say "Tentando dividir por zero:";
+var erro_div = 10 / 0;

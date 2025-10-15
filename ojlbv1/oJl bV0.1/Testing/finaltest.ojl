@@ -1,0 +1,13 @@
+! Teste completo da linguagem OJL.
+
+! Comando 'say' com texto literal.
+say "Ola, mundo.";
+
+! Declaracao e uso de variaveis.
+var meu_nome = "John";
+say "Meu nome e";
+say $meu_nome; ! Deve imprimir John
+
+! Linha vazia e comentario abaixo.
+
+! Fim do teste.
